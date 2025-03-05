@@ -12,6 +12,7 @@ class RewardingLevelScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Rewarding Levels'),
+        leadingWidth: 90,
         leading: Padding(
           padding: const EdgeInsets.only(left: 40.0),
           child: IconButton(

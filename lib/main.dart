@@ -2,6 +2,7 @@ import 'package:coin_boost/core/style/color_manager.dart';
 import 'package:coin_boost/core/style/theme_manager.dart';
 import 'package:coin_boost/providers/earnings_provider.dart';
 import 'package:coin_boost/view/bottom_nav_screen.dart';
+import 'package:coin_boost/view/news_task_screen.dart';
 import 'package:coin_boost/view/onboarding_screen.dart';
 import 'package:coin_boost/view/read_news_screen.dart';
 import 'package:coin_boost/view/splash_screen.dart';
@@ -35,12 +36,13 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeManager.appTheme,
-            initialRoute: '/splash',
+            initialRoute: '/NewsTask',
             routes: {
               '/splash': (context) => const SplashScreen(),
               '/OnBoarding': (context) => const OnboardingScreen(),
               '/BottomNavigation': (context) => const BottomNavScreen(),
               '/ReadNews': (context) => const ReadNewsScreen(),
+              '/NewsTask': (context) => const NewsTaskScreen(),
             },
           ),
         ),

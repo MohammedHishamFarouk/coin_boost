@@ -10,14 +10,15 @@ class ReadNewsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Read News'),
+        leadingWidth: 90,
         leading: Padding(
           padding: const EdgeInsets.only(left: 50.0),
           child: IconButton(
             padding: EdgeInsets.zero,
-            onPressed: () {},
+            onPressed: () => Navigator.of(context).pop(),
+            iconSize: 40,
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,
-              size: 40,
               color: ColorManager.orange,
             ),
           ),
@@ -77,7 +78,10 @@ class ReadNewsScreen extends StatelessWidget {
                         width: 192.36,
                         text: 'Start Now',
                         fontSize: 16,
-                        onPressed: () {},
+                        onPressed: () => Navigator.pushReplacementNamed(
+                          context,
+                          '/NewsTask',
+                        ),
                       ),
                     ),
                   ],
