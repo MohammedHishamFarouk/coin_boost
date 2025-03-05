@@ -6,33 +6,44 @@ class AdsCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _AdCard(
-          size: 30,
-          radius: 7,
+    return Center(
+      child: SizedBox(
+        height: 62,
+        child: ListView.builder(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) => Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _AdCard(
+                size: 30,
+                radius: 7,
+              ),
+              _AdCard(
+                size: 40,
+              ),
+              _AdCard(
+                size: 50,
+              ),
+              _AdCard(
+                color: ColorManager.white,
+              ),
+              _AdCard(
+                size: 50,
+              ),
+              _AdCard(
+                size: 40,
+              ),
+              _AdCard(
+                size: 30,
+                radius: 7,
+              ),
+            ],
+          ),
+          itemCount: 1,
         ),
-        _AdCard(
-          size: 40,
-        ),
-        _AdCard(
-          size: 50,
-        ),
-        _AdCard(
-          color: ColorManager.white,
-        ),
-        _AdCard(
-          size: 50,
-        ),
-        _AdCard(
-          size: 40,
-        ),
-        _AdCard(
-          size: 30,
-          radius: 7,
-        ),
-      ],
+      ),
     );
   }
 }
