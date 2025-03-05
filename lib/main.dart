@@ -3,6 +3,7 @@ import 'package:coin_boost/core/style/theme_manager.dart';
 import 'package:coin_boost/providers/earnings_provider.dart';
 import 'package:coin_boost/view/bottom_nav_screen.dart';
 import 'package:coin_boost/view/onboarding_screen.dart';
+import 'package:coin_boost/view/read_news_screen.dart';
 import 'package:coin_boost/view/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
               '/splash': (context) => const SplashScreen(),
               '/OnBoarding': (context) => const OnboardingScreen(),
               '/BottomNavigation': (context) => const BottomNavScreen(),
+              '/ReadNews': (context) => const ReadNewsScreen(),
             },
           ),
         ),

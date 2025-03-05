@@ -6,11 +6,15 @@ class CustomButton extends StatelessWidget {
     this.onPressed,
     this.width = 307,
     this.height = 48,
+    required this.text,
+    this.fontSize = 24,
   });
 
   final void Function()? onPressed;
   final double width;
   final double height;
+  final double fontSize;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +23,9 @@ class CustomButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: const Text(
-          'Continue',
-          style: TextStyle(fontSize: 24, color: Colors.white),
+        child: Text(
+          text,
+          style: TextStyle(fontSize: fontSize, color: Colors.white),
         ),
       ),
     );

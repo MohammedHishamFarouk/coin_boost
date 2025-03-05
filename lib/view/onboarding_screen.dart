@@ -80,6 +80,7 @@ class OnboardingScreen extends StatelessWidget {
                                   '/BottomNavigation',
                                 )
                             : null,
+                    text: 'Continue',
                   );
                 },
               ),
