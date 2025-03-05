@@ -6,7 +6,16 @@ class ThemeManager {
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
     fontFamily: 'RobotoMono',
-    appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.white,
+      surfaceTintColor: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        color: ColorManager.orange,
+        fontSize: 20,
+        fontFamily: 'RobotoMono',
+      ),
+    ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       showSelectedLabels: false,
       showUnselectedLabels: false,

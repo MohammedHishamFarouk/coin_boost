@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class EarningsProvider extends ChangeNotifier {
-  int _totalEarnings = 0;
+  int earnings = 0;
   String mobileNumber = '';
 
   void totalEarnings(int value) {
-    _totalEarnings = value;
+    earnings = value;
     notifyListeners();
   }
 
