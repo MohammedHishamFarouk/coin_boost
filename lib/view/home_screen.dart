@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
         image: 'assets/news.png',
         reward: '5',
         title: 'Read News',
-        onTap: () {},
+        onTap: () => Navigator.pushNamed(context, '/ReadNews'),
       ),
       const SizedBox(height: 20),
     ];
