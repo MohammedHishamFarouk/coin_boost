@@ -6,7 +6,7 @@ class EarningsProvider extends ChangeNotifier {
   bool dailyLogin = false;
 
   void totalEarnings(int value) {
-    earnings = value;
+    earnings = earnings + value;
     notifyListeners();
   }
 
