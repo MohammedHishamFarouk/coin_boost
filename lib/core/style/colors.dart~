@@ -1,0 +1,3 @@
+class ColorManager {
+  static const orange = 0xFFF7931A;
+}
