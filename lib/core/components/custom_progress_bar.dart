@@ -33,7 +33,7 @@ class CustomProgressBar extends StatelessWidget {
                   actualProgress < 0.1
                       ? ''
                       : "${(actualProgress * 100).toInt()}%",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,

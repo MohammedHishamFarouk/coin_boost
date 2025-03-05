@@ -26,9 +26,9 @@ class RewardsCard extends StatelessWidget {
           Container(
             width: 343,
             height: 174,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: ColorManager.orange,
-              borderRadius: const BorderRadius.vertical(
+              borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
                 bottom: Radius.circular(15),
               ),
@@ -69,7 +69,7 @@ class RewardsCard extends StatelessWidget {
                 Text(
                   'Your earnings = \$${context.watch<EarningsProvider>().earnings}',
                 ),
-                Spacer(),
+                const Spacer(),
                 CustomProgressBar(progress: progress)
               ],
             ),

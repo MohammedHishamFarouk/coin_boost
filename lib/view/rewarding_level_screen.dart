@@ -28,25 +28,16 @@ class RewardingLevelScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 30),
         child: Center(
-          child: Column(
-            spacing: 30,
-            children: [
-              RewardsCard(
-                level: 1,
-                minimumWithdrawal: 50,
-                progress: context.watch<EarningsProvider>().earnings / 50,
-              ),
-              RewardsCard(
-                level: 2,
-                minimumWithdrawal: 100,
-                progress: context.watch<EarningsProvider>().earnings / 100,
-              ),
-              RewardsCard(
-                level: 3,
-                minimumWithdrawal: 150,
-                progress: context.watch<EarningsProvider>().earnings / 150,
-              ),
-            ],
+          child: ListView.separated(
+            itemBuilder: (context, index) => RewardsCard(
+              level: index + 1,
+              minimumWithdrawal: (index + 1) * 50,
+              progress: context.watch<EarningsProvider>().earnings /
+                  ((index + 1) * 50),
+            ),
+            itemCount: 3,
+            separatorBuilder: (BuildContext context, int index) =>
+                const SizedBox(height: 20),
           ),
         ),
       ),

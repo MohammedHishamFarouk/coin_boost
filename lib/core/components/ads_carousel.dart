@@ -12,7 +12,7 @@ class AdsCarousel extends StatelessWidget {
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => Row(
+          itemBuilder: (context, index) => const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -73,7 +73,7 @@ class _AdCard extends StatelessWidget {
             borderRadius: BorderRadius.all(
               Radius.circular(radius),
             ),
-            side: BorderSide(
+            side: const BorderSide(
               color: ColorManager.orange,
               width: 1.0,
             ),

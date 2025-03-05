@@ -1,7 +1,9 @@
 import 'package:coin_boost/core/components/ads_carousel.dart';
 import 'package:coin_boost/core/components/task_card.dart';
 import 'package:coin_boost/core/style/color_manager.dart';
+import 'package:coin_boost/providers/earnings_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     final double screenWidth = MediaQuery.sizeOf(context).width > 700
         ? 700
         : MediaQuery.sizeOf(context).width;
+    final EarningsProvider earningsProvider = context.watch<EarningsProvider>();
     List<Widget> page = [
       const Center(
         child: Padding(
@@ -65,32 +68,32 @@ class HomeScreen extends StatelessWidget {
         title: 'Read News',
         onTap: () {},
       ),
-      const SizedBox(height: 20)
+      const SizedBox(height: 20),
     ];
     return Scaffold(
       appBar: AppBar(
-        actions: const [
-          Spacer(),
-          Image(
+        actions: [
+          const Spacer(),
+          const Image(
             image: AssetImage('assets/profile.png'),
           ),
-          SizedBox(width: 8),
-          Text('John Doe'),
-          Spacer(
+          const SizedBox(width: 8),
+          const Text('John Doe'),
+          const Spacer(
             flex: 4,
           ),
-          Image(
+          const Image(
             image: AssetImage('assets/icons/star medal.png'),
           ),
-          SizedBox(width: 6),
-          Text('Level 1'),
-          Spacer(),
-          Image(
+          const SizedBox(width: 6),
+          const Text('Level 1'),
+          const Spacer(),
+          const Image(
             image: AssetImage('assets/icons/wallet.png'),
           ),
-          SizedBox(width: 6),
-          Text('\$25.00'),
-          Spacer(),
+          const SizedBox(width: 6),
+          Text('\$${earningsProvider.earnings}'),
+          const Spacer(),
         ],
       ),
       body: Padding(

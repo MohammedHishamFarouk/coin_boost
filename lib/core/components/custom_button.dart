@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(
+        child: const Text(
           'Continue',
           style: TextStyle(fontSize: 24, color: Colors.white),
         ),

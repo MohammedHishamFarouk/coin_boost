@@ -15,9 +15,9 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
 
 // List of screens for the different tabs
   final List<Widget> _screens = [
-    HomeScreen(),
-    RewardingLevelScreen(),
-    Center(child: Text('Profile')),
+    const HomeScreen(),
+    const RewardingLevelScreen(),
+    const Center(child: Text('Profile')),
   ];
 
 // Function to handle tab changes

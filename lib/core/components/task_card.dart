@@ -43,7 +43,7 @@ class TaskCard extends StatelessWidget {
               decoration: BoxDecoration(
                 color: ColorManager.white.withOpacity(0.85),
                 borderRadius:
-                    BorderRadius.vertical(bottom: Radius.circular(10)),
+                    const BorderRadius.vertical(bottom: Radius.circular(10)),
               ),
               child: Center(
                 child: Row(
@@ -51,11 +51,11 @@ class TaskCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     ),
                     Text(
                       '\$$reward',
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     ),
                   ],
                 ),

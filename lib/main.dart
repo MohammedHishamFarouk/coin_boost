@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
+    const SystemUiOverlayStyle(
       statusBarColor: ColorManager.orange,
       statusBarIconBrightness: Brightness.light,
     ),
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       ],
       child: Center(
         child: ConstrainedBox(
-          constraints: BoxConstraints(maxWidth: 700),
+          constraints: const BoxConstraints(maxWidth: 700),
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeManager.appTheme,

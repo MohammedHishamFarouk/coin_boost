@@ -6,7 +6,7 @@ class ThemeManager {
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
     fontFamily: 'RobotoMono',
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
