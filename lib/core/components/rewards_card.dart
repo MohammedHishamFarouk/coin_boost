@@ -69,7 +69,7 @@ class RewardsCard extends StatelessWidget {
                 Text(
                   'Your earnings = \$${context.watch<EarningsProvider>().earnings}',
                 ),
-                const SizedBox(height: 20),
+                Spacer(),
                 CustomProgressBar(progress: progress)
               ],
             ),
