@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class EarningsProvider extends ChangeNotifier {
   int earnings = 0;
   String mobileNumber = '';
+  bool dailyLogin = false;
 
   void totalEarnings(int value) {
     earnings = value;

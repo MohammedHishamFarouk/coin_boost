@@ -1,41 +1,56 @@
-import 'package:coin_boost/core/style/color_manager.dart';
+import 'package:coin_boost/modelView/ads_provider.dart';
+import 'package:coin_boost/modelView/earnings_provider.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class AdsCarousel extends StatelessWidget {
   const AdsCarousel({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final adProvider = Provider.of<AdProvider>(context);
     return Center(
       child: SizedBox(
         height: 62,
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) => const Row(
+          itemBuilder: (context, index) => Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              _AdCard(
+              const _AdCard(
                 size: 30,
                 radius: 7,
               ),
-              _AdCard(
+              const _AdCard(
                 size: 40,
               ),
-              _AdCard(
+              const _AdCard(
                 size: 50,
               ),
-              _AdCard(
-                color: ColorManager.white,
+              Consumer<EarningsProvider>(
+                builder: (context, earningsProvider, child) {
+                  return _AdCard(
+                    color: earningsProvider.dailyLogin
+                        ? ColorManager.orange
+                        : ColorManager.white,
+                    onTap: () {
+                      adProvider.showInterstitialAd();
+                      earningsProvider.totalEarnings(2);
+                      earningsProvider.dailyLogin = true;
+                    },
+                  );
+                },
               ),
-              _AdCard(
+              const _AdCard(
                 size: 50,
               ),
-              _AdCard(
+              const _AdCard(
                 size: 40,
               ),
-              _AdCard(
+              const _AdCard(
                 size: 30,
                 radius: 7,
               ),
@@ -53,10 +68,13 @@ class _AdCard extends StatelessWidget {
     this.size = 62,
     this.radius = 10,
     this.color = ColorManager.orange,
+    this.onTap,
   });
+
   final double size;
   final double radius;
   final Color color;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +82,7 @@ class _AdCard extends StatelessWidget {
       width: size,
       height: size,
       child: GestureDetector(
-        onTap: color == ColorManager.white ? () {} : null,
+        onTap: color == ColorManager.white ? onTap : null,
         child: Card(
           color: color,
           shadowColor: Colors.black,

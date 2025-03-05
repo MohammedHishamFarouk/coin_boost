@@ -1,5 +1,5 @@
-import 'package:coin_boost/core/components/news_tag.dart';
-import 'package:coin_boost/core/style/color_manager.dart';
+import 'package:coin_boost/view/core/components/news_tag.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class NewsHeader extends StatelessWidget {
@@ -44,13 +44,13 @@ class NewsHeader extends StatelessWidget {
             ),
             Container(
               height: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.transparent,
-                    Colors.black.withOpacity(0.7),
+                    ColorManager.lightBlack,
                   ],
                 ),
               ),

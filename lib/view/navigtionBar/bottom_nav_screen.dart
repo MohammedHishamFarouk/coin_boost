@@ -1,6 +1,6 @@
-import 'package:coin_boost/core/style/color_manager.dart';
-import 'package:coin_boost/view/home_screen.dart';
-import 'package:coin_boost/view/rewarding_level_screen.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
+import 'package:coin_boost/view/navigtionBar/home/home_screen.dart';
+import 'package:coin_boost/view/navigtionBar/rewarding_level_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavScreen extends StatefulWidget {

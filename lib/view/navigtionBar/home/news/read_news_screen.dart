@@ -1,5 +1,5 @@
-import 'package:coin_boost/core/components/custom_button.dart';
-import 'package:coin_boost/core/style/color_manager.dart';
+import 'package:coin_boost/view/core/components/custom_button.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class ReadNewsScreen extends StatelessWidget {

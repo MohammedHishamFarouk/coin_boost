@@ -8,4 +8,5 @@ class ColorManager {
   static Color lightGrey = Colors.grey[350]!;
   static const Color white = Colors.white;
   static const Color transparentWhite = Colors.white54;
+  static const Color lightBlack = Color(0xB3000000);
 }

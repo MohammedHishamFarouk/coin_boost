@@ -1,6 +1,6 @@
-import 'package:coin_boost/core/components/custom_button.dart';
-import 'package:coin_boost/core/style/color_manager.dart';
-import 'package:coin_boost/providers/earnings_provider.dart';
+import 'package:coin_boost/modelView/earnings_provider.dart';
+import 'package:coin_boost/view/core/components/custom_button.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -73,8 +73,7 @@ class OnboardingScreen extends StatelessWidget {
                 builder: (context, provider, child) {
                   return CustomButton(
                     onPressed:
-                        context.watch<EarningsProvider>().mobileNumber.length >
-                                6
+                        context.read<EarningsProvider>().mobileNumber.length > 7
                             ? () => Navigator.pushReplacementNamed(
                                   context,
                                   '/BottomNavigation',

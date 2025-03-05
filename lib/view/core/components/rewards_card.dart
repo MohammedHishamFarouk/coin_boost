@@ -1,6 +1,6 @@
-import 'package:coin_boost/core/components/custom_progress_bar.dart';
-import 'package:coin_boost/core/style/color_manager.dart';
-import 'package:coin_boost/providers/earnings_provider.dart';
+import 'package:coin_boost/modelView/earnings_provider.dart';
+import 'package:coin_boost/view/core/components/custom_progress_bar.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

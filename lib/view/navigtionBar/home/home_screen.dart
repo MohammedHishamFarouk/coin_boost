@@ -1,7 +1,7 @@
-import 'package:coin_boost/core/components/ads_carousel.dart';
-import 'package:coin_boost/core/components/task_card.dart';
-import 'package:coin_boost/core/style/color_manager.dart';
-import 'package:coin_boost/providers/earnings_provider.dart';
+import 'package:coin_boost/modelView/earnings_provider.dart';
+import 'package:coin_boost/view/core/components/ads_carousel.dart';
+import 'package:coin_boost/view/core/components/task_card.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

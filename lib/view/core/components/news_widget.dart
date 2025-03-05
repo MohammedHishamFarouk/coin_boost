@@ -1,5 +1,5 @@
-import 'package:coin_boost/core/components/news_tag.dart';
-import 'package:coin_boost/core/style/color_manager.dart';
+import 'package:coin_boost/view/core/components/news_tag.dart';
+import 'package:coin_boost/view/core/style/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class NewsWidget extends StatelessWidget {
