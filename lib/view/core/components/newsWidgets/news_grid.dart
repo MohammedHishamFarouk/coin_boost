@@ -1,4 +1,4 @@
-import 'package:coin_boost/view/core/components/news_widget.dart';
+import 'package:coin_boost/view/core/components/newsWidgets/news_widget.dart';
 import 'package:flutter/material.dart';
 
 class NewsGrid extends StatelessWidget {

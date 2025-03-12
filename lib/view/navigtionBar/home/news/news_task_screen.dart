@@ -1,5 +1,5 @@
-import 'package:coin_boost/view/core/components/news_grid.dart';
-import 'package:coin_boost/view/core/components/news_header.dart';
+import 'package:coin_boost/view/core/components/newsWidgets/news_grid.dart';
+import 'package:coin_boost/view/core/components/newsWidgets/news_header.dart';
 import 'package:flutter/material.dart';
 
 class NewsTaskScreen extends StatelessWidget {
