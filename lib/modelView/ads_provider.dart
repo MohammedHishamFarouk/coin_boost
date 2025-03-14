@@ -11,6 +11,11 @@ class AdProvider with ChangeNotifier {
   bool get isBannerAdLoaded => _isBannerAdLoaded;
   bool get isInterstitialAdLoaded => _isInterstitialAdLoaded;
 
+  AdProvider() {
+    _loadBannerAd();
+    _loadInterstitialAd();
+  }
+
   // Load Banner Ad
   void _loadBannerAd() {
     _bannerAd = BannerAd(
