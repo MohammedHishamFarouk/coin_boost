@@ -31,15 +31,15 @@ class AdsCarousel extends StatelessWidget {
                 size: 50,
               ),
               Consumer<EarningsProvider>(
-                builder: (context, earningsProvider, child) {
+                builder: (context, provider, child) {
                   return _AdCard(
-                    color: earningsProvider.dailyLogin
+                    color: provider.dailyLogin
                         ? ColorManager.orange
                         : ColorManager.white,
                     onTap: () {
                       adProvider.showInterstitialAd();
-                      earningsProvider.totalEarnings(2);
-                      earningsProvider.dailyLogin = true;
+                      provider.totalEarnings(2);
+                      provider.dailyLogin = true;
                     },
                   );
                 },

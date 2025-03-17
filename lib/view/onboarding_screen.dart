@@ -72,13 +72,12 @@ class OnboardingScreen extends StatelessWidget {
               Consumer<EarningsProvider>(
                 builder: (context, provider, child) {
                   return CustomButton(
-                    onPressed:
-                        context.read<EarningsProvider>().mobileNumber.length > 7
-                            ? () => Navigator.pushReplacementNamed(
-                                  context,
-                                  '/BottomNavigation',
-                                )
-                            : null,
+                    onPressed: provider.mobileNumber.length > 7
+                        ? () => Navigator.pushReplacementNamed(
+                              context,
+                              '/BottomNavigation',
+                            )
+                        : null,
                     text: 'Continue',
                   );
                 },
